@@ -84,6 +84,32 @@
     el.addEventListener("click", function () { track(el.dataset.track); });
   });
 
+  // Marcas: fila en movimiento + botón para ver todas
+  var all = document.getElementById("logos-all");
+  var track = document.getElementById("logo-track");
+  var marquee = document.getElementById("logo-marquee");
+  var more = document.getElementById("logos-more");
+  if (all && track && marquee && more) {
+    for (var r = 0; r < 2; r++) {
+      Array.prototype.forEach.call(all.children, function (li) {
+        var copy = li.cloneNode(true);
+        if (r === 1) { copy.setAttribute("aria-hidden", "true"); copy.querySelector("img").alt = ""; }
+        track.appendChild(copy);
+      });
+    }
+    all.hidden = true;
+    marquee.hidden = false;
+    more.hidden = false;
+    more.addEventListener("click", function () {
+      var open = all.hidden;
+      all.hidden = !open;
+      all.classList.toggle("is-open", open);
+      if (open) all.classList.add("in");
+      more.setAttribute("aria-expanded", open);
+      more.textContent = open ? "Ver menos ↑" : "Ver todas las marcas →";
+    });
+  }
+
   var y = document.getElementById("y");
   if (y) y.textContent = new Date().getFullYear();
 })();

@@ -1,0 +1,149 @@
+{
+  "contact": {
+    "whatsapp": "573215086945",
+    "whatsappLabel": "+57 321 508 6945",
+    "email": "mjbaez2000@gmail.com",
+    "instagram": "mariajosebaez",
+    "tiktok": ""
+  },
+  "hero": {
+    "lede": "Una rola que se cree llanera, conociendo muchos lugares cool ✨ Creadora de contenido, consultora de marca personal y parte de **María Oliva**."
+  },
+  "about": {
+    "hello": "Hola, soy Majo 👋",
+    "chip": "Creativa",
+    "lede": "Nací rola, pero el Llano me adoptó. Hoy creo contenido desde Villavicencio sobre lifestyle, moda, planes y lugares cool, con la convicción de que **cada publicación debe tener intención**.",
+    "text": "Acompaño a personas y marcas a entender quiénes son antes de publicar: a construir una marca personal coherente, encontrar su territorio emocional y crear contenido que conecte de verdad. También hablo sin filtro de mi vida con dermatitis atópica, porque la autenticidad es la mejor estrategia.",
+    "facts": [
+      { "label": "Base", "value": "Villavicencio, Meta · Colombia" },
+      { "label": "Hablo de", "value": "Marca personal, lifestyle, moda y cultura llanera" },
+      { "label": "Proyecto", "value": "María Oliva — moda que celebra la cultura colombiana" }
+    ],
+    "photos": [
+      { "img": "/img/sm-5.webp", "caption": "NYC" },
+      { "img": "/img/sm-3.webp", "caption": "Graduation day" },
+      { "img": "/img/sm-7.webp", "caption": "¡Lo logramos!" },
+      { "img": "/img/sm-6.webp", "caption": "Llanera" },
+      { "img": "/img/sm-4.webp", "caption": "Lifestyle" },
+      { "img": "/img/sm-1.webp", "caption": "Eventos" },
+      { "img": "/img/sm-2.webp", "caption": "Moda" }
+    ]
+  },
+  "taller": {
+    "intro": "Un taller práctico para dejar de publicar por publicar y empezar a **crear contenido con intención**: entenderte primero, comunicar desde tu identidad y convertirlo en publicaciones alineadas.",
+    "pillars": [
+      { "title": "Estrategia", "text": "Usar las redes de forma consciente. ¿Queremos que nos vean, vender o construir comunidad? Sin intención, el contenido es ruido." },
+      { "title": "Identidad", "text": "¿Quién soy? ¿Cómo quiero que me vean? ¿Qué quiero decir? Comunicar desde lo auténtico para construir una marca coherente." },
+      { "title": "Contenido", "text": "Traducir estrategia e identidad en publicaciones: intención, creación, constancia y planeación. Y perderle el miedo a la cámara." }
+    ],
+    "event": {
+      "show": true,
+      "label": "Próxima fecha · cupos limitados",
+      "title": "Villavicencio · 3 de octubre",
+      "time": "9:00 a.m. – 12:30 p.m.",
+      "place": "Kawi Café y Bar · Cra 37 # 33B-47",
+      "capacity": "Máximo 24 personas",
+      "price": "$350.000",
+      "priceNote": "COP por persona",
+      "button": "Reservar mi cupo",
+      "link": "https://www.aureamanagement.com/event/crea-con-estrategia-by-majo-baez-villavicencio-3/register"
+    }
+  },
+  "services": {
+    "intro": "Lo que hago para que marcas y personas comuniquen con intención.",
+    "items": [
+      {
+        "img": "/img/c-mario.webp",
+        "tag": "Para marcas y negocios",
+        "title": "Consultoría de marca",
+        "text": "Encontramos el ADN de tu marca y lo que la hace única, para que deje de sonar genérica y conecte con su comunidad.",
+        "bullets": ["Diagnóstico de marca y redes", "ADN y territorio emocional", "Voz y personalidad de la marca", "Líneas de contenido"],
+        "price": "A la medida",
+        "button": "Agendar",
+        "link": ""
+      },
+      {
+        "img": "/img/c-cafe.webp",
+        "tag": "Para ti · 1 a 1",
+        "title": "Consultoría de marca personal",
+        "text": "Tu marca personal es lo que perciben de ti. Definimos quién eres, cómo quieres que te vean y qué quieres decir.",
+        "bullets": ["Identidad y percepción", "Tu punto de vista único", "Intención de tus redes", "Plan de contenido y constancia"],
+        "price": "A la medida",
+        "button": "Agendar",
+        "link": ""
+      },
+      {
+        "img": "/img/taller.webp",
+        "tag": "Grupal · presencial",
+        "title": "Taller Crea con estrategia",
+        "text": "Una mañana práctica para dejar de publicar por publicar: estrategia, identidad y contenido con intención.",
+        "bullets": ["Próxima fecha: 3 de octubre", "Villavicencio · Kawi Café", "Máximo 24 cupos", "También para empresas"],
+        "price": "$350.000 COP",
+        "button": "Reservar",
+        "link": "https://www.aureamanagement.com/event/crea-con-estrategia-by-majo-baez-villavicencio-3/register"
+      },
+      {
+        "img": "/img/c-boutique.webp",
+        "tag": "Publicidad digital",
+        "title": "Pauta",
+        "text": "Hacemos que tu contenido llegue a las personas correctas con campañas pagas en Instagram y Facebook.",
+        "bullets": ["Estrategia y segmentación", "Campañas en Meta Ads", "Optimización del presupuesto", "Reporte de resultados"],
+        "price": "Mensual",
+        "button": "Cotizar",
+        "link": ""
+      }
+    ],
+    "also": "Creo contenido para marcas: reels, UGC, campañas, lanzamientos y eventos."
+  },
+  "brands": [
+    { "img": "/img/marcas/avianca.webp", "name": "Avianca" },
+    { "img": "/img/marcas/loreal.webp", "name": "L'Oréal" },
+    { "img": "/img/marcas/kerastase.webp", "name": "Kérastase Paris" },
+    { "img": "/img/marcas/american-eagle.webp", "name": "American Eagle Outfitters" },
+    { "img": "/img/marcas/savital.webp", "name": "Savital" },
+    { "img": "/img/marcas/mikes.webp", "name": "Mike's Hard Lemonade" },
+    { "img": "/img/marcas/ruby-rose.webp", "name": "Ruby Rose cosméticos" },
+    { "img": "/img/marcas/del-vecchio.webp", "name": "Del Vecchio" },
+    { "img": "/img/marcas/monterojo.webp", "name": "Monterojo Gourmet" },
+    { "img": "/img/marcas/alma.webp", "name": "Alma Sleepwear" },
+    { "img": "/img/marcas/treme.webp", "name": "Tremé" },
+    { "img": "/img/marcas/swoa.webp", "name": "SWOA prendas sostenibles" },
+    { "img": "/img/marcas/bohor.webp", "name": "Bohor" },
+    { "img": "/img/marcas/vintro.webp", "name": "Vintro design store" },
+    { "img": "/img/marcas/trendy.webp", "name": "Trendy" },
+    { "img": "/img/marcas/hands-burger.webp", "name": "Hands on Burger" },
+    { "img": "/img/marcas/tpk.webp", "name": "TPK cocina callejera" },
+    { "img": "/img/marcas/palo-cruz.webp", "name": "Palo Cruz Hotel" }
+  ],
+  "feed": [
+    { "img": "/img/c-boutique.webp", "category": "Llano", "title": "No es una boutique cualquiera", "link": "" },
+    { "img": "/img/c-mario.webp", "category": "Consultoría", "title": "¿Mario Hernández es la marca de las abuelas?", "link": "" },
+    { "img": "/img/c-capri.webp", "category": "Viajes", "title": "Dolce vita", "link": "" },
+    { "img": "/img/c-llanera.webp", "category": "Llano", "title": "Dónde comer comida llanera gourmet", "link": "" },
+    { "img": "/img/c-capitulo.webp", "category": "Lifestyle", "title": "Capítulo 1/30", "link": "" },
+    { "img": "/img/c-sanandres.webp", "category": "Viajes", "title": "5 cosas que hacer en San Andrés", "link": "" },
+    { "img": "/img/c-cafe.webp", "category": "Lifestyle", "title": "Outfit del día", "link": "" },
+    { "img": "/img/c-ied.webp", "category": "Consultoría", "title": "Formación en branding", "link": "" }
+  ],
+  "mariaOliva": {
+    "text": "Ropa que celebra la cultura colombiana y lleva el Llano en el corazón: camisetas, esqueletos, hoodies, gorras y colección para niños, con el chigüiro como emblema.",
+    "store": "https://www.mariaoliva.co",
+    "instagram": "mo_mariaoliva",
+    "stores": [
+      { "city": "Villavicencio", "name": "@coconutvaqueria", "link": "https://www.instagram.com/coconutvaqueria/" },
+      { "city": "El Retiro, Ant.", "name": "@algalope_tiendaequina", "link": "https://www.instagram.com/algalope_tiendaequina/" }
+    ]
+  },
+  "links": [
+    { "text": "Taller Crea con estrategia", "sub": "3 de octubre · Villavicencio", "url": "https://www.aureamanagement.com/event/crea-con-estrategia-by-majo-baez-villavicencio-3/register", "style": "destacado" },
+    { "text": "Comprar en María Oliva", "sub": "", "url": "https://www.mariaoliva.co", "style": "verde" },
+    { "text": "WhatsApp", "sub": "", "url": "https://wa.me/573215086945?text=Hola%20Majo%20%E2%9C%A8", "style": "normal" },
+    { "text": "Correo", "sub": "", "url": "mailto:mjbaez2000@gmail.com", "style": "normal" },
+    { "text": "Consultorías y pauta", "sub": "", "url": "/#servicios", "style": "normal" },
+    { "text": "Marcas con las que he trabajado", "sub": "", "url": "/#marcas", "style": "normal" },
+    { "text": "Pedir media kit", "sub": "", "url": "/#contacto", "style": "normal" },
+    { "text": "Instagram", "sub": "", "url": "https://www.instagram.com/mariajosebaez/", "style": "normal" },
+    { "text": "Instagram María Oliva", "sub": "", "url": "https://www.instagram.com/mo_mariaoliva/", "style": "normal" },
+    { "text": "Visitar mi página", "sub": "", "url": "/", "style": "normal" }
+  ]
+}

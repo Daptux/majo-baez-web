@@ -37,7 +37,7 @@
     <div class="avatar"><img src="/img/majo-retrato.webp" alt="Majo Baez"></div>
     <h1>Majo Baez</h1>
     <p class="bio">Una rola que se cree llanera, conociendo muchos lugares cool ✨</p>
-    <ul class="links">
+    <ul class="links" id="links">
       <li><a class="hot" href="https://www.aureamanagement.com/event/crea-con-estrategia-by-majo-baez-villavicencio-3/register" target="_blank" rel="noopener"><span>Taller Crea con estrategia<small>3 de octubre · Villavicencio</small></span></a></li>
       <li><a class="mo" href="https://www.mariaoliva.co" target="_blank" rel="noopener">Comprar en María Oliva</a></li>
       <li><a href="https://wa.me/573215086945?text=Hola%20Majo%20%E2%9C%A8" target="_blank" rel="noopener">WhatsApp</a></li>
@@ -51,5 +51,17 @@
     </ul>
     <p class="foot"><a href="/">majobaez</a> · Crea con estrategia</p>
   </main>
+  <script src="/cms.js"></script>
+  <script>
+    CMS.load().then(function (c) {
+      if (!c || !Array.isArray(c.links)) return;
+      var cls = { destacado: "hot", verde: "mo" };
+      document.getElementById("links").innerHTML = c.links.filter(function (k) { return k.text && k.url; }).map(function (k) {
+        var klass = cls[k.style] ? ' class="' + cls[k.style] + '"' : "";
+        var label = k.sub ? "<span>" + CMS.esc(k.text) + "<small>" + CMS.esc(k.sub) + "</small></span>" : CMS.esc(k.text);
+        return "<li><a" + klass + " " + CMS.linkAttrs(k.url) + ">" + label + "</a></li>";
+      }).join("");
+    });
+  </script>
 </body>
 </html>

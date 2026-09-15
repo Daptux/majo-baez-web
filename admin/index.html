@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Panel · Majo Baez</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700&display=swap">
+<style>
+  :root{--yellow:#FCF0A4;--cream:#FFF9DA;--red:#B52029;--red-dark:#8E1820;--pink:#E9A6BE;--ink:#1A1414;--grey:#6F6A66;--line:#E4DCC4;--white:#fff;--ok:#1F7A4D}
+  *{box-sizing:border-box;margin:0;padding:0}
+  [hidden]{display:none!important}
+  body{background:var(--cream);color:var(--ink);font-family:'Montserrat',system-ui,sans-serif;font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased}
+  button,input,select,textarea{font:inherit;color:inherit}
+  a{color:var(--red)}
+  .display{font-family:'Bebas Neue',Impact,sans-serif;font-weight:400;color:var(--red);line-height:.95;letter-spacing:.01em}
+
+  /* login */
+  .login{min-height:100svh;display:grid;place-items:center;padding:24px 18px;background:var(--yellow)}
+  .login form{width:100%;max-width:380px;background:var(--white);border:2px solid var(--ink);box-shadow:8px 8px 0 var(--red);padding:30px 24px}
+  .login h1{font-size:48px;margin-bottom:4px}
+  .login p{color:var(--grey);font-size:14px;margin-bottom:22px}
+
+  /* campos */
+  .field{display:block;margin-bottom:14px}
+  .field > span{display:block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--grey);margin-bottom:5px}
+  .field small{display:block;font-size:12px;color:var(--grey);margin-top:4px}
+  input[type=text],input[type=email],input[type=url],input[type=password],select,textarea{width:100%;background:var(--white);border:1.5px solid var(--line);border-radius:10px;padding:11px 12px;font-size:16px;transition:border-color .15s}
+  textarea{min-height:92px;resize:vertical}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--red);box-shadow:0 0 0 3px rgba(181,32,41,.12)}
+  .check{display:flex;align-items:center;gap:10px;font-weight:600;margin-bottom:14px;cursor:pointer}
+  .check input{width:22px;height:22px;accent-color:var(--red)}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:2px solid var(--red);background:var(--red);color:var(--yellow);font-family:'Bebas Neue',Impact,sans-serif;font-size:21px;letter-spacing:.05em;line-height:1;padding:12px 20px 9px;border-radius:0;cursor:pointer;text-decoration:none;min-height:46px}
+  .btn:hover{background:var(--red-dark);border-color:var(--red-dark)}
+  .btn:disabled{opacity:.55;cursor:wait}
+  .btn.line{background:transparent;color:var(--red)}
+  .btn.line:hover{background:var(--red);color:var(--yellow)}
+  .btn.small{font-size:17px;padding:8px 12px 6px;min-height:38px}
+  .btn.block{width:100%}
+  .error{color:var(--red);font-weight:600;font-size:14px;min-height:22px;margin-top:10px}
+
+  /* barra superior */
+  .top{position:sticky;top:0;z-index:20;background:var(--yellow);border-bottom:2px solid var(--ink);padding:calc(10px + env(safe-area-inset-top,0px)) 16px 10px}
+  .top-in{max-width:880px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:10px}
+  .top .display{font-size:30px}
+  .top .display span{color:var(--ink)}
+  .top nav{display:flex;gap:8px;align-items:center}
+  .top a,.top button.linkish{font-size:13px;font-weight:700;text-decoration:none;background:none;border:0;cursor:pointer;color:var(--ink);padding:8px 6px}
+
+  main{max-width:880px;margin:0 auto;padding:20px 16px 130px}
+  .intro{background:var(--white);border-left:5px solid var(--red);padding:14px 16px;margin-bottom:18px;font-size:14px}
+  .intro b{color:var(--red)}
+
+  /* secciones */
+  details.sec{background:var(--white);border:2px solid var(--ink);margin-bottom:14px}
+  details.sec > summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:12px;padding:14px 16px;user-select:none}
+  details.sec > summary::-webkit-details-marker{display:none}
+  details.sec > summary .ico{font-size:22px;width:30px;text-align:center}
+  details.sec > summary .t{font-family:'Bebas Neue',Impact,sans-serif;font-size:28px;color:var(--red);line-height:1;flex:1}
+  details.sec > summary .d{display:block;font-family:'Montserrat',sans-serif;font-size:12px;color:var(--grey);margin-top:2px}
+  details.sec > summary::after{content:"+";font-size:26px;color:var(--red);font-weight:500}
+  details.sec[open] > summary::after{content:"–"}
+  details.sec[open] > summary{border-bottom:1.5px solid var(--line)}
+  .sec-body{padding:16px}
+  .group{border:1.5px dashed var(--line);border-radius:12px;padding:14px;margin-bottom:14px}
+  .group > h4,.list > h4{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px}
+
+  /* listas */
+  .list{margin-bottom:16px}
+  .items{display:grid;grid-template-columns:minmax(0,1fr);gap:10px;margin-bottom:10px}
+  .item,.list,.sec-body{min-width:0}
+  .item{border:1.5px solid var(--line);border-radius:12px;background:#FFFDF3}
+  .item-head{display:flex;align-items:center;gap:8px;padding:8px 8px 8px 12px}
+  .item-head .thumb{width:40px;height:40px;border-radius:8px;object-fit:cover;background:var(--line);flex:none}
+  .item-head .thumb.contain{object-fit:contain;background:#fff;border:1px solid var(--line)}
+  .item-head .name{flex:1;font-weight:600;font-size:14px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;cursor:pointer;padding:6px 0}
+  .item-head .name em{color:var(--grey);font-weight:400}
+  .item-head,.item-head .name{min-width:0}
+  .icon-btn{width:38px;height:38px;border-radius:10px;border:1.5px solid var(--line);background:var(--white);cursor:pointer;display:grid;place-items:center;font-size:16px;flex:none}
+  .icon-btn:hover{border-color:var(--red)}
+  .icon-btn.del:hover{background:var(--red);color:#fff}
+  .icon-btn:disabled{opacity:.35;cursor:default}
+  .item-body{padding:4px 12px 12px;border-top:1px solid var(--line)}
+  .count{font-size:12px;color:var(--grey);font-weight:500;letter-spacing:0;text-transform:none;margin-left:6px}
+
+  /* imagen */
+  .img-field{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+  .img-field .preview{width:96px;height:96px;border-radius:10px;border:1.5px solid var(--line);background:#fff center/contain no-repeat;flex:none;display:grid;place-items:center;color:var(--grey);font-size:12px;text-align:center}
+  .img-field .upl{position:relative;overflow:hidden}
+  .img-field .upl input{position:absolute;inset:0;opacity:0;cursor:pointer}
+
+  /* barra guardar */
+  .savebar{position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--ink);color:var(--yellow);padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px))}
+  .savebar-in{max-width:880px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .status{font-size:13px;font-weight:600}
+  .status.dirty{color:var(--pink)}
+  .status.ok{color:#9BE3B8}
+  .savebar .btn{background:var(--yellow);color:var(--red);border-color:var(--yellow)}
+  .savebar .btn:hover{background:#fff;border-color:#fff}
+
+  .toast{position:fixed;left:50%;bottom:calc(84px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ok);color:#fff;font-weight:600;padding:12px 18px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.25);z-index:40;max-width:calc(100% - 32px);text-align:center}
+  .toast.bad{background:var(--red)}
+  .loading{min-height:60svh;display:grid;place-items:center;color:var(--grey)}
+  @media (max-width:520px){.item-head{gap:6px;padding:6px 6px 6px 8px}.icon-btn{width:34px;height:34px}.icon-btn.edit{display:none}.item-head .thumb{width:34px;height:34px}.sec-body{padding:12px}}
+</style>
+</head>
+<body>
+
+<section class="login" id="login" hidden>
+  <form id="login-form" autocomplete="on">
+    <h1 class="display">Panel Majo</h1>
+    <p>Inicia sesión para editar tu página.</p>
+    <label class="field"><span>Usuario</span><input type="text" name="user" autocomplete="username" autocapitalize="none" required></label>
+    <label class="field"><span>Contraseña</span><input type="password" name="password" autocomplete="current-password" required></label>
+    <button class="btn block" type="submit">Entrar</button>
+    <p class="error" id="login-error" role="alert"></p>
+  </form>
+</section>
+
+<div id="app" hidden>
+  <header class="top">
+    <div class="top-in">
+      <div class="display">PANEL<span>MAJO</span></div>
+      <nav>
+        <a href="/" target="_blank" rel="noopener">Ver página ↗</a>
+        <button class="linkish" id="logout" type="button">Salir</button>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="intro">Abre una sección, cambia lo que necesites y toca <b>Guardar cambios</b>. Tu página se actualiza en segundos. Para poner una palabra en <b>negrilla</b> escríbela entre dos asteriscos: <code>**así**</code>.</div>
+    <div id="editor"><div class="loading">Cargando…</div></div>
+  </main>
+  <div class="savebar">
+    <div class="savebar-in">
+      <span class="status" id="status">Todo guardado</span>
+      <button class="btn" id="save" type="button">Guardar cambios</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" hidden></div>
+
+<script src="/admin/admin.js"></script>
+</body>
+</html>

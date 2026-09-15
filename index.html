@@ -60,7 +60,7 @@
       <h1 class="display">Majo<br>Baez</h1>
     </div>
     <div class="hero-bottom">
-      <p class="lede">Una rola que se cree llanera, conociendo muchos lugares cool&nbsp;✨ Creadora de contenido, consultora de marca personal y parte de <strong>María Oliva</strong>.</p>
+      <p class="lede" id="hero-lede">Una rola que se cree llanera, conociendo muchos lugares cool&nbsp;✨ Creadora de contenido, consultora de marca personal y parte de <strong>María Oliva</strong>.</p>
       <div class="row">
         <a class="btn btn-red" href="#taller">Ver el taller</a>
         <a class="btn btn-line" href="#servicios">Servicios</a>
@@ -95,7 +95,7 @@
       <h2 class="display h-lg">Sobre mí</h2>
     </div>
     <div class="about-grid">
-      <div class="polaroids rv">
+      <div class="polaroids rv" id="about-photos">
         <figure class="polaroid"><img src="/img/sm-5.webp" alt="Majo caminando por Nueva York" loading="lazy"><figcaption>NYC</figcaption></figure>
         <figure class="polaroid"><img src="/img/sm-3.webp" alt="Majo en su graduación" loading="lazy"><figcaption>Graduation day</figcaption></figure>
         <figure class="polaroid"><img src="/img/sm-7.webp" alt="Majo recibiendo un diploma frente a un fondo amarillo" loading="lazy"><figcaption>¡Lo logramos!</figcaption></figure>
@@ -105,11 +105,11 @@
         <figure class="polaroid"><img src="/img/sm-2.webp" alt="Majo en una tienda de moda con dos mujeres" loading="lazy"><figcaption>Moda</figcaption></figure>
       </div>
       <div class="about-copy rv">
-        <p class="hand">Hola, soy Majo 👋</p>
-        <span class="chip">Creativa</span>
-        <p class="lede">Nací rola, pero el Llano me adoptó. Hoy creo contenido desde Villavicencio sobre lifestyle, moda, planes y lugares cool, con la convicción de que <strong>cada publicación debe tener intención</strong>.</p>
-        <p>Acompaño a personas y marcas a entender quiénes son antes de publicar: a construir una marca personal coherente, encontrar su territorio emocional y crear contenido que conecte de verdad. También hablo sin filtro de mi vida con dermatitis atópica, porque la autenticidad es la mejor estrategia.</p>
-        <ul class="facts">
+        <p class="hand" id="about-hello">Hola, soy Majo 👋</p>
+        <span class="chip" id="about-chip">Creativa</span>
+        <p class="lede" id="about-lede">Nací rola, pero el Llano me adoptó. Hoy creo contenido desde Villavicencio sobre lifestyle, moda, planes y lugares cool, con la convicción de que <strong>cada publicación debe tener intención</strong>.</p>
+        <p id="about-text">Acompaño a personas y marcas a entender quiénes son antes de publicar: a construir una marca personal coherente, encontrar su territorio emocional y crear contenido que conecte de verdad. También hablo sin filtro de mi vida con dermatitis atópica, porque la autenticidad es la mejor estrategia.</p>
+        <ul class="facts" id="about-facts">
           <li><b>Base</b><span>Villavicencio, Meta · Colombia</span></li>
           <li><b>Hablo de</b><span>Marca personal, lifestyle, moda y cultura llanera</span></li>
           <li><b>Proyecto</b><span>María Oliva — moda que celebra la cultura colombiana</span></li>
@@ -126,12 +126,12 @@
     <div class="wrap taller-copy">
       <p class="spaced rv">Taller presencial</p>
       <h2 class="display rv">Crea con<br>estrategia</h2>
-      <p class="lede rv">Un taller práctico para dejar de publicar por publicar y empezar a <strong>crear contenido con intención</strong>: entenderte primero, comunicar desde tu identidad y convertirlo en publicaciones alineadas.</p>
+      <p class="lede rv" id="taller-intro">Un taller práctico para dejar de publicar por publicar y empezar a <strong>crear contenido con intención</strong>: entenderte primero, comunicar desde tu identidad y convertirlo en publicaciones alineadas.</p>
     </div>
   </div>
   <div class="wrap">
 
-    <div class="pillars">
+    <div class="pillars" id="taller-pillars">
       <article class="pillar rv">
         <div class="n">01</div>
         <h3>Estrategia</h3>
@@ -149,7 +149,7 @@
       </article>
     </div>
 
-    <div class="event rv">
+    <div class="event rv" id="taller-event">
       <div>
         <p class="spaced" style="color:var(--pink)">Próxima fecha · cupos limitados</p>
         <h3>Villavicencio · 3 de octubre</h3>
@@ -221,10 +221,10 @@
       <svg class="sparkle" aria-hidden="true"><use href="#spark"/></svg>
       <div>
         <h2 class="display h-lg">Servicios</h2>
-        <p class="lede" style="margin-top:14px">Lo que hago para que marcas y personas comuniquen con intención.</p>
+        <p class="lede" style="margin-top:14px" id="services-intro">Lo que hago para que marcas y personas comuniquen con intención.</p>
       </div>
     </div>
-    <div class="shop">
+    <div class="shop" id="services-list">
       <article class="item rv">
         <div class="item-img"><img src="/img/c-mario.webp" alt="Análisis de marca en un desfile de moda" loading="lazy"><span class="item-n">01</span></div>
         <div class="item-body">
@@ -299,7 +299,7 @@
       </article>
     </div>
     <div class="also rv">
-      <p><span class="chip">También</span> Creo contenido para marcas: reels, UGC, campañas, lanzamientos y eventos.</p>
+      <p><span class="chip">También</span> <span id="services-also">Creo contenido para marcas: reels, UGC, campañas, lanzamientos y eventos.</span></p>
       <a class="btn btn-line" href="#contacto" data-kit="1">Pedir media kit</a>
     </div>
   </div>
@@ -344,14 +344,14 @@
       <svg class="sparkle" aria-hidden="true"><use href="#spark"/></svg>
       <h2 class="display h-lg">Contenido</h2>
     </div>
-    <div class="tabs rv" role="group" aria-label="Filtrar contenido">
+    <div class="tabs rv" id="feed-tabs" role="group" aria-label="Filtrar contenido">
       <button class="tab" aria-pressed="true" data-f="all">Todo</button>
       <button class="tab" aria-pressed="false" data-f="lifestyle">Lifestyle</button>
       <button class="tab" aria-pressed="false" data-f="llano">Llano</button>
       <button class="tab" aria-pressed="false" data-f="viajes">Viajes</button>
       <button class="tab" aria-pressed="false" data-f="consultoria">Consultoría</button>
     </div>
-    <div class="feed">
+    <div class="feed" id="feed">
       <figure class="reel rv" data-c="llano"><img src="/img/c-boutique.webp" alt="Majo en una boutique vaquera de Villavicencio" loading="lazy"><figcaption><b>Llano</b>No es una boutique cualquiera</figcaption></figure>
       <figure class="reel rv" data-c="consultoria"><img src="/img/c-mario.webp" alt="Mujer mayor sosteniendo una caja en un desfile de moda" loading="lazy"><figcaption><b>Consultoría</b>¿Mario Hernández es la marca de las abuelas?</figcaption></figure>
       <figure class="reel rv" data-c="viajes"><img src="/img/c-capri.webp" alt="Majo comiendo frente al mar en la costa italiana" loading="lazy"><figcaption><b>Viajes</b>Dolce vita</figcaption></figure>
@@ -371,14 +371,14 @@
       <img class="mo-logo" src="/img/mo-logo.webp" width="400" height="400" alt="Logo de María Oliva: un chigüiro" loading="lazy">
       <p class="spaced">Fashion made encouraging colombian cultura</p>
       <h2 class="display h-lg" style="margin-top:10px">María Oliva</h2>
-      <p class="lede">Ropa que celebra la cultura colombiana y lleva el Llano en el corazón: camisetas, esqueletos, hoodies, gorras y colección para niños, con el chigüiro como emblema.</p>
-      <div class="mo-stores">
+      <p class="lede" id="mo-text">Ropa que celebra la cultura colombiana y lleva el Llano en el corazón: camisetas, esqueletos, hoodies, gorras y colección para niños, con el chigüiro como emblema.</p>
+      <div class="mo-stores" id="mo-stores">
         <div><b>Villavicencio</b><span>en <a href="https://www.instagram.com/coconutvaqueria/" target="_blank" rel="noopener">@coconutvaqueria</a></span></div>
         <div><b>El Retiro, Ant.</b><span>en <a href="https://www.instagram.com/algalope_tiendaequina/" target="_blank" rel="noopener">@algalope_tiendaequina</a></span></div>
       </div>
       <div style="display:flex;flex-wrap:wrap;gap:12px">
-        <a class="btn btn-green" href="https://www.mariaoliva.co" target="_blank" rel="noopener" data-track="mo_tienda"><svg width="20" height="20" aria-hidden="true"><use href="#i-bag"/></svg>Comprar en María Oliva</a>
-        <a class="btn btn-line" href="https://www.instagram.com/mo_mariaoliva/" target="_blank" rel="noopener">@mo_mariaoliva</a>
+        <a class="btn btn-green" id="mo-store" href="https://www.mariaoliva.co" target="_blank" rel="noopener" data-track="mo_tienda"><svg width="20" height="20" aria-hidden="true"><use href="#i-bag"/></svg>Comprar en María Oliva</a>
+        <a class="btn btn-line" id="mo-ig" href="https://www.instagram.com/mo_mariaoliva/" target="_blank" rel="noopener">@mo_mariaoliva</a>
       </div>
     </div>
     <div class="mo-collage rv">
@@ -412,7 +412,7 @@
         <h2 class="display h-md">Resolvamos dudas</h2>
       </div>
       <p class="lede">¿Tienes una marca, un evento o quieres llevar el taller a tu empresa? Cuéntame por WhatsApp o escríbeme al correo.</p>
-      <ul class="contact-list">
+      <ul class="contact-list" id="contact-list">
         <li><a href="https://wa.me/573215086945" target="_blank" rel="noopener" data-track="whatsapp"><svg aria-hidden="true"><use href="#i-wa"/></svg>+57 321 508 6945</a></li>
         <li><a href="mailto:mjbaez2000@gmail.com" data-track="correo"><svg aria-hidden="true"><use href="#i-mail"/></svg>mjbaez2000@gmail.com</a></li>
         <li><a href="https://www.instagram.com/mariajosebaez/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-ig"/></svg>@mariajosebaez</a></li>
@@ -453,7 +453,7 @@
         <a class="logo" href="#inicio">MAJO<span>BAEZ</span></a>
         <small>Crea con estrategia · Villavicencio, Colombia</small>
       </div>
-      <div class="social">
+      <div class="social" id="social">
         <a href="https://www.instagram.com/mariajosebaez/" target="_blank" rel="noopener" aria-label="Instagram de Majo Baez"><svg><use href="#i-ig"/></svg></a>
         <a href="https://wa.me/573215086945" target="_blank" rel="noopener" aria-label="WhatsApp"><svg><use href="#i-wa"/></svg></a>
         <a href="mailto:mjbaez2000@gmail.com" aria-label="Correo de Majo Baez"><svg><use href="#i-mail"/></svg></a>
@@ -462,13 +462,14 @@
     </div>
     <div class="foot-bottom">
       <span>© <span id="y">2026</span> María José Báez. Todos los derechos reservados.</span>
-      <span><a href="/links">Links</a> · Sitio por <a href="https://daptux.ai" target="_blank" rel="noopener">Daptux.AI</a></span>
+      <span><a href="/links">Links</a> · <a href="/admin" rel="nofollow">Admin</a> · Sitio por <a href="https://daptux.ai" target="_blank" rel="noopener">Daptux.AI</a></span>
     </div>
   </div>
 </footer>
 
-<a class="wa" href="https://wa.me/573215086945?text=Hola%20Majo%2C%20vengo%20de%20tu%20p%C3%A1gina%20web%20%E2%9C%A8" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp" data-track="whatsapp_flotante"><svg><use href="#i-wa"/></svg></a>
+<a class="wa" id="wa-float" href="https://wa.me/573215086945?text=Hola%20Majo%2C%20vengo%20de%20tu%20p%C3%A1gina%20web%20%E2%9C%A8" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp" data-track="whatsapp_flotante"><svg><use href="#i-wa"/></svg></a>
 
+<script src="/cms.js" defer></script>
 <script src="/script.js" defer></script>
 </body>
 </html>

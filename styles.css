@@ -197,17 +197,38 @@ section{position:relative}
 .compare td:first-child .tag{letter-spacing:.2em;font-size:10px}
 @media (max-width:860px){.manifesto-grid{grid-template-columns:1fr}}
 
-/* ---------- services ---------- */
-.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2vw,24px)}
-.svc{background:var(--cream);border:2px solid var(--red);padding:28px 26px;display:flex;flex-direction:column;gap:12px;transition:transform .2s ease,box-shadow .2s ease}
-.svc:hover{transform:translate(-4px,-4px);box-shadow:8px 8px 0 var(--red)}
-.svc .ico{width:46px;height:46px;color:var(--red)}
-.svc h3{font-family:var(--display);font-weight:400;font-size:36px;line-height:1;color:var(--red)}
-.svc p{font-size:15px;flex:1}
-.svc ul{list-style:none;display:flex;flex-wrap:wrap;gap:6px}
-.svc li{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;border:1px solid var(--red);color:var(--red);padding:3px 9px;border-radius:99px}
-@media (max-width:980px){.services-grid{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:620px){.services-grid{grid-template-columns:1fr}}
+/* ---------- services (shop) ---------- */
+.shop{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(14px,1.8vw,24px)}
+.item{background:var(--white);border:2px solid var(--ink);display:flex;flex-direction:column;transition:transform .2s ease,box-shadow .2s ease}
+.item:hover{transform:translate(-4px,-4px);box-shadow:8px 8px 0 var(--red)}
+.item-img{position:relative;aspect-ratio:4/5;overflow:hidden;border-bottom:2px solid var(--ink);background:var(--ink)}
+.item-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.item:hover .item-img img{transform:scale(1.05)}
+.item-n{position:absolute;left:12px;top:12px;background:var(--red);color:var(--yellow);font-family:var(--display);font-size:26px;line-height:1;padding:6px 10px 3px}
+.item-body{padding:20px 20px 22px;display:flex;flex-direction:column;gap:10px;flex:1}
+.item-tag{font-size:10px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--grey)}
+.item h3{font-family:var(--display);font-weight:400;font-size:clamp(30px,2.6vw,38px);line-height:.95;color:var(--red)}
+.item p{font-size:14.5px;line-height:1.55}
+.item ul{list-style:none;display:grid;gap:6px;margin:4px 0 6px;flex:1;align-content:start}
+.item li{font-size:13.5px;padding-left:22px;position:relative}
+.item li::before{content:"✦";position:absolute;left:0;top:0;color:var(--red);font-size:12px}
+.item-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;border-top:1.5px dashed rgba(26,20,20,.25);padding-top:14px}
+.item-price{font-family:var(--display);font-size:24px;white-space:nowrap;line-height:1;color:var(--ink)}
+.item-price small{font-family:var(--body);font-size:11px;font-weight:700;letter-spacing:.14em;color:var(--grey)}
+.item .btn{font-size:18px;padding:11px 14px 8px;flex:none}
+.also{margin-top:clamp(28px,4vw,44px);display:flex;align-items:center;justify-content:space-between;gap:18px 28px;flex-wrap:wrap;border:2px dashed var(--red);padding:18px clamp(18px,3vw,28px)}
+.also p{font-size:16px;font-weight:500;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.also .chip{font-size:24px}
+@media (max-width:1100px){.shop{grid-template-columns:repeat(2,1fr)}.item-img{aspect-ratio:16/11}}
+@media (max-width:600px){.shop{grid-template-columns:1fr}}
+
+/* ---------- brands ---------- */
+.logos{list-style:none;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:clamp(10px,1.4vw,18px)}
+.logos li{background:var(--white);aspect-ratio:3/2;position:relative;min-width:0;overflow:hidden;border-radius:10px;box-shadow:0 1px 0 rgba(26,20,20,.06),0 8px 20px rgba(181,32,41,.07);transition:transform .2s ease}
+.logos li:hover{transform:translateY(-4px)}
+.logos img{position:absolute;inset:14% 12%;width:76%;height:72%;object-fit:contain}
+@media (max-width:980px){.logos{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media (max-width:620px){.logos{grid-template-columns:repeat(3,minmax(0,1fr))}}
 
 /* ---------- content / portfolio ---------- */
 .tabs{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:28px}

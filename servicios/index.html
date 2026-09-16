@@ -3,21 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Majo Baez · Crea con estrategia</title>
-<meta name="description" content="María José Báez — creadora de contenido, consultora de marca personal y parte de María Oliva. Contenido con intención desde Villavicencio.">
+<title>Servicios · Majo Baez</title>
+<meta name="description" content="Consultoría de marca, consultoría de marca personal, taller Crea con estrategia y pauta digital. Marcas con las que ha trabajado Majo Baez.">
 <meta name="theme-color" content="#FFFAEB">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Majo Baez · Crea con estrategia">
-<meta property="og:description" content="María José Báez — creadora de contenido, consultora de marca personal y parte de María Oliva. Contenido con intención desde Villavicencio.">
+<meta property="og:title" content="Servicios · Majo Baez">
+<meta property="og:description" content="Consultoría de marca, consultoría de marca personal, taller Crea con estrategia y pauta digital. Marcas con las que ha trabajado Majo Baez.">
 <meta property="og:image" content="/img/og.jpg">
 <meta property="og:locale" content="es_CO">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="canonical" href="https://majo-baez-web.vercel.app/">
+<link rel="canonical" href="https://majo-baez-web.vercel.app/servicios">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@500;700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap">
-<link rel="preload" as="image" href="/img/majo-retrato.webp">
 <link rel="stylesheet" href="/styles.css">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Person","name":"María José Báez","alternateName":"Majo Baez","jobTitle":"Creadora de contenido y consultora de marca personal","email":"mailto:mjbaez2000@gmail.com","telephone":"+57 321 508 6945","address":{"@type":"PostalAddress","addressLocality":"Villavicencio","addressRegion":"Meta","addressCountry":"CO"},"sameAs":["https://www.instagram.com/mariajosebaez/","https://www.instagram.com/mo_mariaoliva/"]}
@@ -42,9 +41,9 @@
     <a class="logo" href="/" aria-label="Majo Baez, inicio">MAJO<span>BAEZ</span></a>
     <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
     <ul class="nav-links" id="menu">
-      <li><a href="/" class="active" aria-current="page">Inicio</a></li>
+      <li><a href="/">Inicio</a></li>
       <li><a href="/sobre-mi">Sobre mí</a></li>
-      <li><a href="/servicios">Servicios</a></li>
+      <li><a href="/servicios" class="active" aria-current="page">Servicios</a></li>
       <li><a href="/taller">Taller</a></li>
       <li><a href="/maria-oliva">María Oliva</a></li>
       <li><a class="btn btn-red" href="/contacto">Hablemos</a></li>
@@ -53,59 +52,93 @@
 </header>
 
 <main>
-<section class="hero" id="inicio">
-  <div class="wrap hero-in">
-    <div class="hero-title">
-      <h1 class="display">Majo<br>Baez</h1>
-    </div>
-    <div class="hero-bottom">
-      <p class="lede" id="hero-lede">Una rola que se cree llanera, conociendo muchos lugares cool&nbsp;✨ Creadora de contenido, consultora de marca personal y parte de <strong>María Oliva</strong>.</p>
-      <div class="row">
-        <a class="btn btn-red" href="/taller">Ver el taller</a>
-        <a class="btn btn-line" href="/servicios">Servicios</a>
+<section class="sec" id="servicios">
+  <svg class="arrow" style="right:6%;top:70px" aria-hidden="true"><use href="#arrow"/></svg>
+  <div class="wrap">
+    <div class="sec-head rv">
+      <svg class="sparkle" aria-hidden="true"><use href="#spark"/></svg>
+      <div>
+        <h2 class="display h-lg">Servicios</h2>
+        <p class="lede" style="margin-top:14px" id="services-intro">Lo que hago para que marcas y personas comuniquen con intención.</p>
       </div>
     </div>
-  </div>
-  <div class="hero-photo">
-    <svg class="rays r1" aria-hidden="true"><use href="#rays"/></svg>
-    <svg class="rays r2" aria-hidden="true"><use href="#rays"/></svg>
-    <div class="hero-chip" aria-hidden="true">
-      <span class="chip">Crea con</span>
-      <span class="chip">estrategia</span>
+    <div class="shop" id="services-list">
+      <article class="item rv">
+        <div class="item-img"><img src="/img/c-mario.webp" alt="Análisis de marca en un desfile de moda" loading="lazy"><span class="item-n">01</span></div>
+        <div class="item-body">
+          <span class="item-tag">Para marcas y negocios</span>
+          <h3>Consultoría de marca</h3>
+          <p>Encontramos el ADN de tu marca y lo que la hace única, para que deje de sonar genérica y conecte con su comunidad.</p>
+          <ul>
+            <li>Diagnóstico de marca y redes</li>
+            <li>ADN y territorio emocional</li>
+            <li>Voz y personalidad de la marca</li>
+            <li>Líneas de contenido</li>
+          </ul>
+          <div class="item-foot">
+            <span class="item-price">A la medida</span>
+            <a class="btn btn-red" href="https://wa.me/573215086945?text=Hola%20Majo%20%E2%9C%A8%20quiero%20informaci%C3%B3n%20sobre%20la%20consultor%C3%ADa%20de%20marca" target="_blank" rel="noopener" data-track="svc_consultoria_marca">Agendar</a>
+          </div>
+        </div>
+      </article>
+      <article class="item rv">
+        <div class="item-img"><img src="/img/c-cafe.webp" alt="Majo con blazer negro y gafas de sol" loading="lazy"><span class="item-n">02</span></div>
+        <div class="item-body">
+          <span class="item-tag">Para ti · 1 a 1</span>
+          <h3>Consultoría de marca personal</h3>
+          <p>Tu marca personal es lo que perciben de ti. Definimos quién eres, cómo quieres que te vean y qué quieres decir.</p>
+          <ul>
+            <li>Identidad y percepción</li>
+            <li>Tu punto de vista único</li>
+            <li>Intención de tus redes</li>
+            <li>Plan de contenido y constancia</li>
+          </ul>
+          <div class="item-foot">
+            <span class="item-price">A la medida</span>
+            <a class="btn btn-red" href="https://wa.me/573215086945?text=Hola%20Majo%20%E2%9C%A8%20quiero%20informaci%C3%B3n%20sobre%20la%20consultor%C3%ADa%20de%20marca%20personal" target="_blank" rel="noopener" data-track="svc_consultoria_personal">Agendar</a>
+          </div>
+        </div>
+      </article>
+      <article class="item rv">
+        <div class="item-img"><img src="/img/taller.webp" alt="Grupo de participantes en el taller Crea con estrategia" loading="lazy"><span class="item-n">03</span></div>
+        <div class="item-body">
+          <span class="item-tag">Grupal · presencial</span>
+          <h3>Taller Crea con estrategia</h3>
+          <p>Una mañana práctica para dejar de publicar por publicar: estrategia, identidad y contenido con intención.</p>
+          <ul>
+            <li>Próxima fecha: 3 de octubre</li>
+            <li>Villavicencio · Kawi Café</li>
+            <li>Máximo 24 cupos</li>
+            <li>También para empresas</li>
+          </ul>
+          <div class="item-foot">
+            <span class="item-price">$350.000 <small>COP</small></span>
+            <a class="btn btn-red" href="https://www.aureamanagement.com/event/crea-con-estrategia-by-majo-baez-villavicencio-3/register" target="_blank" rel="noopener" data-track="svc_taller">Reservar</a>
+          </div>
+        </div>
+      </article>
+      <article class="item rv">
+        <div class="item-img"><img src="/img/c-boutique.webp" alt="Contenido para una boutique en Villavicencio" loading="lazy"><span class="item-n">04</span></div>
+        <div class="item-body">
+          <span class="item-tag">Publicidad digital</span>
+          <h3>Pauta</h3>
+          <p>Hacemos que tu contenido llegue a las personas correctas con campañas pagas en Instagram y Facebook.</p>
+          <ul>
+            <li>Estrategia y segmentación</li>
+            <li>Campañas en Meta Ads</li>
+            <li>Optimización del presupuesto</li>
+            <li>Reporte de resultados</li>
+          </ul>
+          <div class="item-foot">
+            <span class="item-price">Mensual</span>
+            <a class="btn btn-red" href="https://wa.me/573215086945?text=Hola%20Majo%20%E2%9C%A8%20quiero%20cotizar%20pauta%20para%20mi%20marca" target="_blank" rel="noopener" data-track="svc_pauta">Cotizar</a>
+          </div>
+        </div>
+      </article>
     </div>
-    <img src="/img/majo-retrato.webp" width="1000" height="1504" alt="Retrato en blanco y negro de María José Báez con blazer negro">
-  </div>
-  <div class="hero-side" aria-hidden="true">MARIA JOSE BAEZ</div>
-</section>
-
-
-<div class="marquee" aria-hidden="true">
-  <div class="marquee-track">
-    <span>Marca personal</span><span>Contenido con intención</span><span>Lifestyle</span><span>Llanera de corazón</span><span>Consultoría</span><span>Colaboraciones con marcas</span><span>María Oliva</span>
-    <span>Marca personal</span><span>Contenido con intención</span><span>Lifestyle</span><span>Llanera de corazón</span><span>Consultoría</span><span>Colaboraciones con marcas</span><span>María Oliva</span>
-  </div>
-</div>
-
-
-<section class="sec" id="explora">
-  <div class="wrap">
-    <div class="gate">
-      <a class="gate-card rv" href="/sobre-mi">
-        <img src="/img/sm-4.webp" alt="Majo Baez" loading="lazy">
-        <span class="gate-body"><span class="gate-t">Sobre mí</span><span class="gate-d">Mi historia y mi contenido</span></span>
-      </a>
-      <a class="gate-card rv" href="/servicios">
-        <img src="/img/c-mario.webp" alt="Consultoría de marca" loading="lazy">
-        <span class="gate-body"><span class="gate-t">Servicios</span><span class="gate-d">Consultorías, marcas y pauta</span></span>
-      </a>
-      <a class="gate-card rv" href="/taller">
-        <img src="/img/taller.webp" alt="Taller Crea con estrategia" loading="lazy">
-        <span class="gate-body"><span class="gate-t">Taller</span><span class="gate-d">Crea con estrategia</span></span>
-      </a>
-      <a class="gate-card rv" href="/maria-oliva">
-        <img src="/img/mo-5.webp" alt="Camiseta de María Oliva" loading="lazy">
-        <span class="gate-body"><span class="gate-t">María Oliva</span><span class="gate-d">Moda que celebra lo nuestro</span></span>
-      </a>
+    <div class="also rv">
+      <p><span class="chip">También</span> <span id="services-also">Creo contenido para marcas: reels, UGC, campañas, lanzamientos y eventos.</span></p>
+      <a class="btn btn-line" href="/contacto" data-kit="1">Pedir media kit</a>
     </div>
   </div>
 </section>
@@ -139,17 +172,6 @@
       <li><img src="/img/marcas/palo-cruz.webp" alt="Palo Cruz Hotel" loading="lazy"></li>
     </ul>
     <button class="btn btn-line logos-more" id="logos-more" type="button" aria-expanded="false" aria-controls="logos-all" hidden>Ver todas las marcas →</button>
-  </div>
-</section>
-
-
-<section class="sec hablemos" aria-label="Llamado a la acción">
-  <svg class="rays-bg" viewBox="0 0 1200 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-    <g fill="currentColor"><path d="M30 60c80 20 150 50 220 90l-6 12C176 124 104 94 26 74Z"/><path d="M0 250c90-6 180-4 260 4l-2 14C178 262 90 262 2 266Z"/><path d="M60 440c60-40 130-76 200-98l6 12c-70 24-136 60-196 100Z"/><path d="M1170 60c-80 20-150 50-220 90l6 12c68-38 140-68 218-88Z"/><path d="M1200 250c-90-6-180-4-260 4l2 14c80-6 168-6 256-2Z"/><path d="M1140 440c-60-40-130-76-200-98l-6 12c70 24 136 60 196 100Z"/></g>
-  </svg>
-  <div class="wrap" style="position:relative">
-    <h2 class="display rv">Hablemos<br>de esto</h2>
-    <a class="btn btn-yellow rv" href="/contacto" style="margin-top:34px">Escríbeme</a>
   </div>
 </section>
 

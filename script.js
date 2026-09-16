@@ -45,11 +45,12 @@
     var el = ev.target.closest("[data-track]");
     if (el) trackEvent(el.dataset.track);
     var kit = ev.target.closest("[data-kit]");
-    if (kit) $("f-tipo").value = "Solicitar media kit";
+    if (kit && $("f-tipo")) $("f-tipo").value = "Solicitar media kit";
   });
 
   // ---------- Filtro de contenido ----------
-  $("feed-tabs").addEventListener("click", function (ev) {
+  var feedTabs = $("feed-tabs");
+  if (feedTabs) feedTabs.addEventListener("click", function (ev) {
     var t = ev.target.closest(".tab");
     if (!t) return;
     var f = t.dataset.f;
@@ -63,7 +64,7 @@
   // ---------- Formulario -> WhatsApp ----------
   var form = $("form");
   var note = $("form-note");
-  form.addEventListener("submit", function (ev) {
+  if (form) form.addEventListener("submit", function (ev) {
     ev.preventDefault();
     var d = new FormData(form);
     var nombre = (d.get("nombre") || "").trim();
@@ -88,6 +89,7 @@
   var logoTrack = $("logo-track");
   var more = $("logos-more");
   function buildMarquee() {
+    if (!all || !logoTrack || !more) return;
     logoTrack.innerHTML = "";
     for (var r = 0; r < 2; r++) {
       Array.prototype.forEach.call(all.children, function (li) {
@@ -102,7 +104,7 @@
     $("logo-marquee").hidden = false;
     more.hidden = false;
   }
-  more.addEventListener("click", function () {
+  if (more) more.addEventListener("click", function () {
     var open = all.hidden;
     all.hidden = !open;
     all.classList.toggle("is-open", open);
@@ -152,8 +154,8 @@
     }).join(""));
     var ev = t.event || {};
     var evEl = $("taller-event");
-    evEl.hidden = !ev.show;
-    if (ev.show) {
+    if (evEl) evEl.hidden = !ev.show;
+    if (evEl && ev.show) {
       var meta = [["Horario", ev.time], ["Lugar", ev.place], ["Cupos", ev.capacity]].filter(function (m) { return m[1]; });
       evEl.innerHTML =
         '<div><p class="spaced" style="color:var(--pink)">' + C.esc(ev.label) + "</p><h3>" + C.esc(ev.title) + '</h3><div class="event-meta">' +
@@ -180,7 +182,7 @@
     }).join(""));
 
     // Marcas
-    all.innerHTML = list(c.brands).filter(function (b) { return C.img(b.img); }).map(function (b) {
+    if (all) all.innerHTML = list(c.brands).filter(function (b) { return C.img(b.img); }).map(function (b) {
       return '<li><img src="' + C.esc(C.img(b.img)) + '" alt="' + C.esc(b.name) + '" loading="lazy"></li>';
     }).join("");
     buildMarquee();
@@ -204,10 +206,10 @@
     set("mo-stores", list(mo.stores).map(function (s) {
       return "<div><b>" + C.esc(s.city) + "</b><span>en " + (s.link ? "<a " + C.linkAttrs(s.link) + ">" + C.esc(s.name) + "</a>" : C.esc(s.name)) + "</span></div>";
     }).join(""));
-    if (mo.store) $("mo-store").setAttribute("href", C.url(mo.store));
+    if (mo.store && $("mo-store")) $("mo-store").setAttribute("href", C.url(mo.store));
     var moIgEl = $("mo-ig");
-    moIgEl.hidden = !moIg;
-    if (moIg) { moIgEl.href = "https://www.instagram.com/" + encodeURIComponent(moIg) + "/"; moIgEl.textContent = "@" + moIg; }
+    if (moIgEl) moIgEl.hidden = !moIg;
+    if (moIgEl && moIg) { moIgEl.href = "https://www.instagram.com/" + encodeURIComponent(moIg) + "/"; moIgEl.textContent = "@" + moIg; }
 
     // Contacto, footer y botón flotante
     var contacts = [];
@@ -225,7 +227,7 @@
     if (ct.email) social.push('<a href="mailto:' + C.esc(ct.email) + '" aria-label="Correo"><svg><use href="#i-mail"/></svg></a>');
     if (mo.store) social.push('<a ' + C.linkAttrs(mo.store) + ' aria-label="Tienda María Oliva"><svg><use href="#i-bag"/></svg></a>');
     set("social", social.join(""));
-    $("wa-float").href = C.wa(WA, "Hola Majo, vengo de tu página web ✨");
+    if ($("wa-float")) $("wa-float").href = C.wa(WA, "Hola Majo, vengo de tu página web ✨");
 
     reveal();
   }

@@ -316,3 +316,23 @@ section{position:relative}
 .rv{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
 .rv.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+/* ---------- accesos del inicio ---------- */
+.gate{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(12px,1.6vw,22px)}
+.gate-card{position:relative;display:block;text-decoration:none;color:var(--ink);background:var(--white);border:2px solid var(--brand);overflow:hidden;transition:transform .2s ease,box-shadow .2s ease}
+.gate-card:hover{transform:translate(-4px,-4px);box-shadow:8px 8px 0 var(--pink)}
+.gate-card img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;transition:transform .5s ease}
+.gate-card:hover img{transform:scale(1.05)}
+.gate-body{display:block;padding:16px 18px 20px;border-top:2px solid var(--brand)}
+.gate-t{display:block;font-family:var(--display);font-size:clamp(28px,2.4vw,34px);line-height:1;color:var(--brand)}
+.gate-d{display:block;font-size:13.5px;color:var(--grey);margin-top:6px}
+@media (max-width:900px){.gate{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:480px){.gate-card img{aspect-ratio:3/2}}
+
+/* ---------- navegación activa y pie ---------- */
+.nav-links a.active{color:var(--brand)}
+.nav-links a.active:not(.btn)::after{right:0}
+.foot-nav{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:26px;padding-top:20px;border-top:1px solid rgba(254,237,170,.2)}
+.foot-nav a{color:#DCD4C4;text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.06em}
+.foot-nav a:hover{color:var(--yellow)}
+.foot-bottom{margin-top:16px}
